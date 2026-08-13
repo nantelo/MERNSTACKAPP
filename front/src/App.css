@@ -1,0 +1,53 @@
+#root{
+  margin: 0;
+  
+}
+body{
+  background-color: #504d4d;
+  margin: 0;
+  
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #e6bd1a;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.hero{
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  color: #ed833c;
+}
+.counter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  color: #ed833c;
+  background-color: azure;
+}
+.counter>div>button{
+  background-color: aquamarine;
+  padding: 10px;
+  font-weight: bolder;
+  margin-left: 5px;
+  cursor: pointer;
+  color: #141212;
+}
