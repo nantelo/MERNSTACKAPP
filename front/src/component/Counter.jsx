@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Counter = () => {
   const [count, setCount] = useState(0)
   return (
-    <div class="counter">
+    <div className="counter">
       <p>You clicked {count} times</p>
       <div>
             <button onClick={() => setCount(count + 1)}>
