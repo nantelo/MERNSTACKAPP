@@ -31,4 +31,17 @@ res.status(200).json(updated);
 res.status(400).json({ message: err.message });
 }
 };
-module.exports = { addStudent, getStudents, updateStudent};
+
+const deleteStudent = async (req, res) => {
+try {
+const deleted = await Student.findByIdAndDelete(req.params.id);
+if (!deleted)
+return res.status(404).json({ message: "Student not found" });
+res.status(200).json({
+message: "Student deleted successfully"
+});
+} catch (err) {
+res.status(500).json({ message: err.message });
+}
+};
+module.exports = { addStudent, getStudents, updateStudent,deleteStudent};

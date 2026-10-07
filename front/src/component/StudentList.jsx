@@ -1,4 +1,4 @@
-function StudentList({ students, onEdit }) {
+function StudentList({ students, onEdit, onDelete }) {
 return (
 <div className="student-list">
 <h2>Student Records</h2>
@@ -24,6 +24,7 @@ return (
 <td>{s.email}</td>
 <td>
 <button onClick={() => onEdit(s)}>Edit</button>
+<button onClick={() => onDelete(s._id)}>Delete</button>
 </td>
 </tr>
 ))}
