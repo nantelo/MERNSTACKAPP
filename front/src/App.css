@@ -1,93 +1,78 @@
- #root{
-  margin: 0;
-  
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f4f4;
 }
-body{
-  background-color: #504d4d;
-  margin: 0;
-  
+.container {
+max-width: 900px;
+margin: 40px auto;
+padding: 0 20px;
 }
-.navbar{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: #e6bd1a;
+h1 {
+text-align: center;
+color: #1d4ed8;
 }
-.navbar ul{
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
+.student-form {
+background: white;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 30px;
 }
-.hero{
-  text-align: center;
-  padding: 50px;
-  background-color: #f4f4f4;
+.student-form input {
+flex: 1;
+min-width: 150px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
 }
-.list{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  color: #ed833c;
+.student-form button {
+padding: 10px 20px;
+border: none;
+background: #2563eb;
+color: white;
+border-radius: 6px;
+cursor: pointer;
 }
-.counter{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  color: #ed833c;
-  background-color: azure;
-}
-.counter>div>button{
-  background-color: aquamarine;
-  padding: 10px;
-  font-weight: bolder;
-  margin-left: 5px;
-  cursor: pointer;
-  color: #141212;
-}
-#border{
+.search-bar {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 6px;
+border: 1px solid #ccc;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color:white;
-  
-  
-  
-}
-#display{
-  
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
+
 
 }
-#display>input{
-  pointer-events: none;
+.student-list table {
+width: 100%;
+border-collapse: collapse;
+background: white;
+border-radius: 8px;
+overflow: hidden;
 }
-#buttons{
-
-   border: 1px solid black;
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 5px;
-   padding: 20px;
-   
-   
+.student-list th, .student-list td {
+padding: 12px;
+text-align: left;
+border-bottom: 1px solid #eee;
 }
-#buttons>button{
-  padding: 10px;
-  background-color: #141212;
-  color: white;
-  
+.student-list th {
+background: #2563eb;
+color: white;
 }
-
-   
+.student-list button {
+margin-right: 6px;
+padding: 6px 12px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+color: white;
+}
+.student-list button:first-of-type {
+background: #16a34a;
+}
+.student-list button:last-of-type {
+background: #dc2626;
+}

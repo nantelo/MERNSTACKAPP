@@ -4,8 +4,17 @@ import StudentList from "./component/StudentList";
 import { getAllStudents } from "./api/studentApi";
 import "./App.css";
 import { deleteStudent } from "./api/studentApi";
+import SearchBar from "./component/SearchBar";
 function App() {
 const [students, setStudents] = useState([]);
+const [searchTerm, setSearchTerm] = useState("");
+
+const filteredStudents = students.filter(
+(s) =>
+s.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+s.rollNo.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
 const fetchStudents = async () => {
 const res = await getAllStudents();
 setStudents(res.data);
@@ -35,8 +44,12 @@ return (
 editingStudent={editingStudent}
 clearEdit={() => setEditingStudent(null)}
 />
-<StudentList 
-students={students}
+<SearchBar
+searchTerm={searchTerm}
+setSearchTerm={setSearchTerm}
+/>
+<StudentList
+students={filteredStudents}
 onEdit={setEditingStudent}
 onDelete={handleDelete} />
 </div>
